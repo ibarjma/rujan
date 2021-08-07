@@ -13,7 +13,7 @@ export default function Header({ toggle }) {
   const { firebase } = useContext(FirebaseContext)
 
   return (
-    <header className='h-16  mb-8'>
+    <header className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
       <div className='container mx-auto max-w-screen-lg h-full'>
         <div className='flex justify-between h-full items-end'>
           {/* logo */}
