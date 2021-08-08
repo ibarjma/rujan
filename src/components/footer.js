@@ -26,7 +26,10 @@ export default function Footer() {
         src='images/footer/forma1.png'
         alt=''
       />
-      <div style={{ position: 'relative', top: '5vw' }} className='block w-max'>
+      <div
+        style={{ position: 'relative', top: '5vw' }}
+        className='block w-max relative py-3 max-w-screen-sm lg:max-w-7xl md:max-w-3xl sm:max-w-3xl sm:mx-2 mx-auto'
+      >
         <h1
           style={{ color: '#00AEF4' }}
           className='poppinsBold lg:text-5xl md:text-3xl text-center'

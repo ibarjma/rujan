@@ -13,19 +13,19 @@ export default function Header({ toggle }) {
   const { firebase } = useContext(FirebaseContext)
 
   return (
-    <header className='container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center'>
+    <header className='container mx-auto flex flex-wrap p-5 flex-col items-center'>
       <div className='container mx-auto max-w-screen-lg h-full'>
         <div className='flex justify-between h-full items-end'>
           {/* logo */}
 
           <div className='pl-4 text-gray-700 text-center flex items-center cursor-pointer'>
             <h1 className='flex justify-center w-full'>
-              <Link to={ROUTES.DASHBOARD} aria-label='Instragram logo'>
+              <Link to={ROUTES.DASHBOARD} aria-label='Rujan logo'>
                 {' '}
                 <img
-                  src='/images/logo.png'
-                  alt='Instagram'
-                  className='mt-2 w-3/12'
+                  src='/images/logo.svg'
+                  alt='Rujan'
+                  className='mt-2 w-full'
                 />
               </Link>
             </h1>
@@ -132,8 +132,8 @@ export default function Header({ toggle }) {
             </svg>
           </div>
           <div
-            style={{ fontSize: '0.6rem' }}
-            className='pr-8 poppinsSemiBold nowrap text-center flex items-center align-items md:block hidden'
+            style={{ fontSize: '0.75rem' }}
+            className='pr-2 pl-16 poppinsSemiBold text-center flex items-center align-items md:block lg:block lg:whitespace-nowrap hidden'
           >
             <Link className='p-4' to='/'>
               SOY MARCA

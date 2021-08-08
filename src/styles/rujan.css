@@ -49,6 +49,53 @@ body {
   margin: 5px;
 }
 
+.cuadradoceleste {
+  z-index: -9;
+  min-width: 125vw;
+  top: -5vw;
+  left: -20.5vw;
+  max-height: calc(100% + 220px);
+}
+
+.pancho {
+  z-index: -10;
+  padding: 0rem;
+  min-width: 110vw;
+  left: -20vw;
+}
+.cuadradoGrande {
+  position: relative;
+}
+
+.img9 {
+  width: 80%;
+  position: relative;
+  right: -2rem;
+  top: 2rem;
+}
+.cuadradoAma {
+  z-index: -2;
+  position: absolute;
+  width: 45vh;
+  height: 40vh;
+  background-color: yellow;
+}
+
+/* .celeste {
+  background-image: url(./../assets/images/formaceleste_1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+} */
+.fuego {
+  position: absolute;
+  z-index: -9;
+  right: -10px;
+  width: 30%;
+  top: 50vh;
+  height: auto;
+  /* padding: 3rem; */
+}
 .address {
   font-size: x-large;
   font-family: PoppinsRegular;
@@ -94,9 +141,12 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #eb008b;
-  text-shadow: #eb008b -10px 5px;
+  text-shadow: #eb008b 6px 3px;
 }
 
+.blenny {
+  font-family: Blenny;
+}
 .footer {
   margin-top: 1rem;
   padding: 1rem;
@@ -110,4 +160,26 @@ body {
 .bold {
   font-weight: bold;
   font-size: xx-large;
+}
+
+.wrapper {
+  position: absolute;
+}
+
+.wrapper h1 {
+  font-family: poppinsBold;
+  font-size: 32px;
+  letter-spacing: 10px;
+  text-align: center;
+  position: absolute;
+  left: 50%;
+  /* I think this works for centering? */
+  top: calc(50% - 64px);
+  -webkit-transform: translate(-50%, calc(-50% - 64px));
+  -ms-transform: translate(-50%, calc(-50% - 64px));
+  transform: translate(-50%, calc(-50% - 64px));
+}
+
+.wrapper h1 span {
+  position: absolute;
 }
