@@ -302,48 +302,49 @@ export default function Main() {
           <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
             <p></p>
           </div>
-          <div class='my-1 w-full px-2 sm:px-16 h-64'>
+          <div class='my-1 w-full px-2 sm:px-16'>
             <div style={{ zIndex: -1 }} className='relative'>
               <p className='blenny text-9xl yellow z-10'>FAQ</p>
               <span className='absolute celestito'></span>
             </div>
+            <div className='pb-16 mb-16'>
+              <Ask
+                ask='¿Cómo me inscribo'
+                id='id1'
+                response='En cada Nivel tienes la opción de abonar la totalidad del curso o el módulo que quieras.'
+                isOpen={id1}
+                toggle={toggle}
+              />
+              <Ask
+                ask='¿Otorgan certificados al finalizar el curso?'
+                id='id2'
+                response='Sí, el certificado es digital y para recibirlo tienes que haber cumplido con los siguientes requisitos:'
+                isOpen={id2}
+                toggle={toggle}
+              />
+              <Ask
+                ask='¿Cuál es el rol de los tutores?'
+                id='id3'
+                response='jorge'
+                isOpen={id3}
+                toggle={toggle}
+              />
+              <Ask
+                ask='¿Cuándo se realizan los Workshops?'
+                id='id4'
+                response='jorge'
+                isOpen={id4}
+                toggle={toggle}
+              />
 
-            <Ask
-              ask='¿Cómo me inscribo'
-              id='id1'
-              response='En cada Nivel tienes la opción de abonar la totalidad del curso o el módulo que quieras.'
-              isOpen={id1}
-              toggle={toggle}
-            />
-            <Ask
-              ask='¿Otorgan certificados al finalizar el curso?'
-              id='id2'
-              response='Sí, el certificado es digital y para recibirlo tienes que haber cumplido con los siguientes requisitos:'
-              isOpen={id2}
-              toggle={toggle}
-            />
-            <Ask
-              ask='¿Cuál es el rol de los tutores?'
-              id='id3'
-              response='jorge'
-              isOpen={id3}
-              toggle={toggle}
-            />
-            <Ask
-              ask='¿Cuándo se realizan los Workshops?'
-              id='id4'
-              response='jorge'
-              isOpen={id4}
-              toggle={toggle}
-            />
-
-            <Ask
-              ask='¿Qué es Rujan?'
-              id='id5'
-              response='jorge'
-              isOpen={id5}
-              toggle={toggle}
-            />
+              <Ask
+                ask='¿Qué es Rujan?'
+                id='id5'
+                response='jorge'
+                isOpen={id5}
+                toggle={toggle}
+              />
+            </div>
           </div>
         </div>
         <img

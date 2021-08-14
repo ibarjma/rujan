@@ -2,20 +2,26 @@ import React from 'react'
 
 const Ask = ({ ask, response, isOpen, toggle, id }) => {
   return (
-    <div>
+    <div className='poppinsBold yellow text-2xl py-8'>
       {isOpen ? <span>-</span> : <span>+</span>}
-      <p id={id} onClick={toggle}>
-        {ask}
-      </p>
+      <span>
+        <span id={id} onClick={toggle}>
+          {ask}
+        </span>
+      </span>
       <div
         className={
-          isOpen
-            ? 'grid grid-rows-2 text-center items-center poppinsSemiBold nowrap'
-            : 'hidden'
+          isOpen ? 'text-center items-center poppinsSemiBold nowrap' : 'hidden'
         }
         onClick={toggle}
       >
-        <p>{response}</p>
+        <p
+          id={id}
+          style={{ whiteSpace: 'initial' }}
+          className='poppinsSemiBold yellow text-xl py-8'
+        >
+          {response}
+        </p>
       </div>
     </div>
   )
