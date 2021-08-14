@@ -54,15 +54,44 @@ body {
   min-width: 125vw;
   top: -5vw;
   left: -20.5vw;
-  max-height: calc(100% + 220px);
+  max-height: calc(100% + 280px);
 }
 
 .pancho {
   z-index: -10;
   padding: 0rem;
   min-width: 110vw;
-  left: -20vw;
+  left: calc(100% - 50vw);
 }
+
+.corona {
+  width: clamp(5rem, 17vw, 15rem);
+  left: clamp(5rem, 43vw, 32rem);
+  top: clamp(1rem, 8vw, 11rem);
+}
+
+.fuegorosa {
+  right: calc(100% - 50vw);
+  top: calc(80% - 1vw);
+  width: clamp(20rem, 90% - 5vw, 75rem);
+  z-index: 1;
+}
+
+.fuego-deforme {
+  right: calc(100% - 50vw);
+  top: calc(80% - 1vw);
+  width: clamp(20rem, 90% - 5vw, 75rem);
+  z-index: 1;
+}
+
+.celestito {
+  background-color: #29abe2;
+  width: 17.5rem;
+  height: 3rem;
+  bottom: 2rem;
+  z-index: -1;
+}
+
 .cuadradoGrande {
   position: relative;
 }
@@ -87,14 +116,36 @@ body {
   background-position: center;
   background-size: cover;
 } */
+
+.fondoNegro {
+  background-color: black;
+  position: absolute;
+  left: -30vw;
+  width: 130vw;
+  height: 260%;
+  z-index: -2;
+}
 .fuego {
   position: absolute;
-  z-index: -9;
+  z-index: -8;
   right: -10px;
   width: 30%;
   top: 50vh;
   height: auto;
   /* padding: 3rem; */
+}
+
+.fuegofooter {
+  z-index: 3;
+  left: -20vw;
+  width: 30%;
+  bottom: -20vw;
+  height: auto;
+}
+.corona2 {
+  width: 70%;
+  bottom: 7rem;
+  left: 2rem;
 }
 .address {
   font-size: x-large;
@@ -141,7 +192,7 @@ body {
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
   -webkit-text-stroke-color: #eb008b;
-  text-shadow: #eb008b 6px 3px;
+  text-shadow: #eb008b -6px -3px;
 }
 
 .blenny {

@@ -156,7 +156,6 @@ export default function Header({ toggle }) {
           </div>
         </div>
       </div>
-      <Dropdown />
     </header>
   )
 }
