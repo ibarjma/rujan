@@ -22,19 +22,12 @@ export default function Main() {
     })
   }
 
+  useEffect(() => {
+    document.body.classList.add('root-pink')
+  })
+
   return (
     <div>
-      <img
-        style={{
-          position: 'absolute',
-          top: '-0.25rem',
-          left: '-0.25rem',
-          zIndex: '-1',
-          width: '40%',
-        }}
-        src='images/main/forma1.png'
-        alt=''
-      />
       <img className='fuego' src='images/main/fuego.svg' alt='' />
       {/* <section className='celeste'></section> */}
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
@@ -298,6 +291,11 @@ export default function Main() {
           </div>
           <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
             <p></p>
+            <img
+              src='images/main/footer.svg'
+              className='absolute fuegofooter'
+              alt=''
+            />
           </div>
           <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
             <p></p>
@@ -347,11 +345,6 @@ export default function Main() {
             </div>
           </div>
         </div>
-        <img
-          src='images/main/footer.svg'
-          className='absolute fuegofooter'
-          alt=''
-        />
       </div>
     </div>
     /* <img

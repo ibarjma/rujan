@@ -1,11 +1,23 @@
-import { Link, useHistory } from 'react-router-dom'
-import { useContext } from 'react'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import { useContext, useEffect } from 'react'
 import UserContext from '../context/user'
 
 import * as ROUTES from '../constants/routes'
 import FirebaseContext from '../context/firebase'
 import Mapa from '../components/mapa'
 export default function Footer() {
+  const location = useLocation()
+  useEffect(() => {
+    let loc = location.pathname
+    console.log(loc)
+    switch (loc) {
+      case '/main':
+        break
+      case '/brand':
+        console.log('brand')
+        break
+    }
+  }, [location])
   return (
     <div
       style={{
@@ -18,17 +30,32 @@ export default function Footer() {
       <div className='container mx-auto p-5 items-center'>
         <div className='container mx-auto max-w-screen-lg h-full'>
           <div className=''>
-            <img
-              style={{
-                position: 'absolute',
-                top: '-0.3vw',
-                left: '-6vw',
-                width: '105vw',
-                maxWidth: '200%',
-              }}
-              src='images/footer/forma1.png'
-              alt=''
-            />
+            {location.pathname == '/brand' ? (
+              <img
+                style={{
+                  position: 'absolute',
+                  top: '-0.3vw',
+                  left: '-6vw',
+                  width: '105vw',
+                  maxWidth: '200%',
+                }}
+                src='images/footer/forma3.svg'
+                alt=''
+              />
+            ) : (
+              <img
+                style={{
+                  position: 'absolute',
+                  top: '-0.3vw',
+                  left: '-6vw',
+                  width: '105vw',
+                  maxWidth: '200%',
+                }}
+                src='images/footer/forrmacheta.svg'
+                alt=''
+              />
+            )}
+
             <div
               style={{ position: 'relative', top: '10vw', left: '-2.5rem' }}
               className='block pt-8 w-max relative py-3 max-w-screen-sm lg:max-w-7xl md:max-w-3xl sm:max-w-3xl sm:mx-2 mx-auto'

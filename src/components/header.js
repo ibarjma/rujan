@@ -1,26 +1,42 @@
-import { Link, useHistory } from 'react-router-dom'
-import { useContext } from 'react'
+import { Link, useHistory, useLocation } from 'react-router-dom'
+import { useContext, useEffect, useRef } from 'react'
 import UserContext from '../context/user'
 
 import * as ROUTES from '../constants/routes'
 import FirebaseContext from '../context/firebase'
 
-import Dropdown from './dropdown'
-
 export default function Header({ toggle }) {
+  const headerRef = useRef()
   const history = useHistory()
   const { user } = useContext(UserContext)
   const { firebase } = useContext(FirebaseContext)
+  const location = useLocation()
+  useEffect(() => {
+    let loc = location.pathname
+    console.log(loc)
+    switch (loc) {
+      case '/main':
+        headerRef.current.classList.remove('yellow')
+        headerRef.current.classList.add('blackFont')
+        break
+      case '/brand':
+        console.log('brand')
+        headerRef.current.classList.add('yellow')
+        break
+    }
+  }, [location])
 
+  console.log(headerRef.current)
+  // console.log(document.getElementById('header').classList)
   return (
     <header className='container mx-auto flex flex-wrap p-5 flex-col items-center'>
-      <div className='container mx-auto max-w-screen-lg h-full'>
+      <div className='container mx-auto max-w-screen-lg h-full' ref={headerRef}>
         <div className='flex justify-between h-full items-end'>
           {/* logo */}
 
           <div className='pl-4 text-gray-700 text-center flex items-center cursor-pointer'>
             <h1 className='flex justify-center w-full'>
-              <Link to={ROUTES.DASHBOARD} aria-label='Rujan logo'>
+              <Link to={ROUTES.MAIN} aria-label='Rujan logo'>
                 {' '}
                 <img
                   src='/images/logo.svg'
@@ -135,22 +151,22 @@ export default function Header({ toggle }) {
             style={{ fontSize: '0.75rem' }}
             className='pr-2 pl-16 poppinsSemiBold text-center flex items-center align-items md:block lg:block lg:whitespace-nowrap hidden'
           >
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/brand'>
               SOY MARCA
             </Link>
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/'>
               SOY INFLUENCER
             </Link>
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/'>
               RUJAN SCHOOL
             </Link>
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/'>
               AGENCIA
             </Link>
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/'>
               SHOPSTREAMING
             </Link>
-            <Link className='p-4' to='/'>
+            <Link className='z-10 px-4' to='/'>
               QUIENES SOMOS
             </Link>
           </div>

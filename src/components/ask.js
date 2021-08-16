@@ -3,7 +3,7 @@ import React from 'react'
 const Ask = ({ ask, response, isOpen, toggle, id }) => {
   return (
     <div className='poppinsBold yellow text-2xl py-8'>
-      {isOpen ? <span>-</span> : <span>+</span>}
+      {isOpen ? <span>- </span> : <span>+ </span>}
       <span>
         <span id={id} onClick={toggle}>
           {ask}
@@ -18,7 +18,7 @@ const Ask = ({ ask, response, isOpen, toggle, id }) => {
         <p
           id={id}
           style={{ whiteSpace: 'initial' }}
-          className='poppinsSemiBold yellow text-xl py-8'
+          className='poppinsSemiBold yellow text-xl pt-8'
         >
           {response}
         </p>

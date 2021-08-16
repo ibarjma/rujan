@@ -25,7 +25,6 @@
 }
 
 body {
-  background-color: #eb008b;
   overflow-x: hidden;
 }
 
@@ -77,6 +76,13 @@ body {
   z-index: 1;
 }
 
+.fuegorosaBrand {
+  left: calc(100% - 50vw);
+  top: calc(100% - 20vw);
+  width: clamp(20rem, 90% - 5vw, 75rem);
+  z-index: 1;
+}
+
 .fuego-deforme {
   right: calc(100% - 50vw);
   top: calc(80% - 1vw);
@@ -94,6 +100,13 @@ body {
 
 .cuadradoGrande {
   position: relative;
+}
+
+.img1 {
+  width: 100%;
+  position: relative;
+  right: 2rem;
+  top: 2rem;
 }
 
 .img9 {
@@ -125,6 +138,28 @@ body {
   height: 260%;
   z-index: -2;
 }
+
+.fondoCeleste {
+  background-color: #62adf1;
+  position: absolute;
+  left: -30vw;
+  width: 130vw;
+  height: 260%;
+  z-index: -2;
+}
+.olaCeleste {
+  position: absolute;
+  max-width: 130vw;
+  z-index: -2;
+  width: 106vw;
+  transform: translate(-5vw, -20vw);
+}
+
+.cuadradoN {
+  width: 50vw;
+  height: 30vw;
+  background-color: black;
+}
 .fuego {
   position: absolute;
   z-index: -8;
@@ -134,12 +169,29 @@ body {
   height: auto;
   /* padding: 3rem; */
 }
+.blackFont {
+  color: black;
+}
+.root-black {
+  background-color: black;
+}
+
+.cuadradoRosa {
+  z-index: -2;
+  position: absolute;
+  width: 45vh;
+  height: 60vh;
+  background-color: #eb008b;
+}
+.root-pink {
+  background-color: #eb008b;
+}
 
 .fuegofooter {
   z-index: 3;
-  left: -20vw;
+  left: calc(100% - 53vw);
   width: 30%;
-  bottom: -20vw;
+  top: calc(100% + 50vw);
   height: auto;
 }
 .corona2 {
@@ -178,6 +230,13 @@ body {
 .poppinsBold {
   font-family: PoppinsBold;
   font-weight: bold;
+}
+
+.coronaMini {
+  width: 2.2rem;
+  height: 2.2rem;
+  top: -1rem;
+  left: 9rem;
 }
 
 .blennySpecialYellow {
