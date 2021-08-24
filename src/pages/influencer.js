@@ -1,11 +1,10 @@
-import { useEffect, useState, React } from 'react'
+import React, { useEffect } from 'react'
 
-export default function Brand() {
+const Influencer = () => {
   useEffect(() => {
     document.body.classList.remove('root-pink')
     document.body.classList.add('root-black')
   })
-
   return (
     <div>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
@@ -13,7 +12,7 @@ export default function Brand() {
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
             <p className='blennySpecialYellow pl-4 lg:text-7xl text-7xl pt-8'>
               {' '}
-              MARKETING DIGITAL <br></br>
+              AGENCIA <br></br>
             </p>
 
             <p className='poppinsSemiBold yellow'>
@@ -50,9 +49,9 @@ export default function Brand() {
               <div className='cuadradoGrande'>
                 <div
                   style={{ width: '100%', height: '100%' }}
-                  className='my-1 w-full px-2 sm:px-16  sm:w-1/2 cuadradoRosa'
+                  className='my-1 w-full px-2 sm:px-16  sm:w-1/2 cuadradoCeleste'
                 ></div>
-                <img className='img1' src='images/brand/img1.png' alt='' />
+                <img className='img1' src='images/influencer/img1.png' alt='' />
               </div>
             </div>
           </div>
@@ -60,21 +59,21 @@ export default function Brand() {
           <div className='my-1 w-full px-2 sm:px-16 relative sm:w-1/2'>
             <img
               className='absolute fuegorosaBrand'
-              src='images/brand/fuegoRosa.svg'
+              src='images/influencer/fuegoCelesteT.svg'
               alt=''
             />
             <div className='relative right-16 md:px-4 px-16 py-8 foto2'>
               <img
-                className='absolute object-cover rounded-full'
-                src={`images/main/c4.jpg`}
+                className='absolute'
+                src={`images/influencer/img2.png`}
                 alt=''
               />
             </div>
           </div>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
-            <p className='blennySpecialYellow pl-4 lg:text-6xl yellow text-4xl relative top-16 right-32 pt-36'>
+            <p className='blennySpecialYellow pl-4 lg:text-7xl yellow text-4xl relative top-16 pt-36'>
               {' '}
-              SHOPSTREAMING <br></br>
+              ESCUELA <br></br>
             </p>
           </div>
           <div class='relative my-1 w-full px-2 sm:px-16  sm:w-1/2'></div>
@@ -143,13 +142,19 @@ export default function Brand() {
           <div class='relative my-1 w-full px-2 sm:px-16 h-64 sm:w-1/2 '>
             <div className='flex justify-center'>
               <button
-                style={{ backgroundColor: '#83dbe0' }}
+                style={{ backgroundColor: '#eb008b' }}
                 className=' bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full mt-16'
               >
-                IR A SHOPSTREAMING
+                IR A ESCUELA
               </button>
             </div>
-            <img className='pt-8' src='images/brand/img2.png' alt='' />
+            <img
+              data-aos='zoom-y-out'
+              data-aos-delay='150'
+              className='pt-8'
+              src='images/brand/img2.png'
+              alt=''
+            />
           </div>
         </div>
       </div>
@@ -201,3 +206,5 @@ export default function Brand() {
     </div>
   )
 }
+
+export default Influencer

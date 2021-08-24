@@ -1,5 +1,11 @@
 import { lazy, Suspense, useState, useEffect, useRef } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { Route, Switch, useLocation } from 'react-router-dom'
+
+import AOS from 'aos'
+import { focusHandling } from 'cruip-js-toolkit'
+
+import 'aos/dist/aos.css'
+
 import ReactLoader from './components/loader'
 import * as ROUTES from './constants/routes'
 import UserContext from './context/user'
@@ -14,13 +20,16 @@ const NotFound = lazy(() => import('./pages/not-found'))
 const Dashboard = lazy(() => import('./pages/dashboard'))
 const Main = lazy(() => import('./pages/main'))
 const Brand = lazy(() => import('./pages/brand'))
-
+const Influencer = lazy(() => import('./pages/influencer'))
+const School = lazy(() => import('./pages/school'))
 // const Index = lazy(() => import('./pages/index'))
 
 function App() {
   const { user } = useAuthListener()
 
   const [isOpen, setIsOpen] = useState(false)
+
+  const location = useLocation()
 
   const toggle = () => {
     setIsOpen(!isOpen)
@@ -35,37 +44,43 @@ function App() {
 
     window.addEventListener('resize', hideMenu)
   })
+
+  useEffect(() => {
+    AOS.init({
+      once: true,
+      disable: 'phone',
+      duration: 700,
+      easing: 'ease-out-cubic',
+    })
+  })
+
+  useEffect(() => {
+    document.querySelector('html').style.scrollBehavior = 'auto'
+    window.scroll({ top: 0 })
+    document.querySelector('html').style.scrollBehavior = ''
+    focusHandling('outline')
+  }, [location.pathname]) // triggered on route change
+
   return (
     //  usar un PROVIDER
     <>
-      <img
-        style={{
-          position: 'absolute',
-          top: '-0.25rem',
-          left: '-0.25rem',
-          zIndex: '-1',
-          width: '40%',
-        }}
-        src='images/brand/forma1.png'
-        alt=''
-      />
       <UserContext.Provider value={{ user }}>
-        <Router>
-          <Suspense fallback={<ReactLoader />}>
-            <Header toggle={toggle} />
-            <Dropdown isOpen={isOpen} toggle={toggle} />
-            <Switch>
-              <Route path={ROUTES.LOGIN} component={Login} />
-              <Route path={ROUTES.MAIN} component={Main} />
-              {/* <Route path={ROUTES.INDEX} component={Index} /> */}
-              <Route path={ROUTES.SIGN_UP} component={SignUp} />
-              <Route path={ROUTES.DASHBOARD} component={Dashboard} />
-              <Route path={ROUTES.BRAND} component={Brand} />
-              <Route component={NotFound} />
-            </Switch>
-            <Footer />
-          </Suspense>
-        </Router>
+        <Suspense fallback={<ReactLoader />}>
+          <Header toggle={toggle} />
+          <Dropdown isOpen={isOpen} toggle={toggle} />
+          <Switch>
+            <Route path={ROUTES.LOGIN} component={Login} />
+            <Route path={ROUTES.MAIN} component={Main} />
+            {/* <Route path={ROUTES.INDEX} component={Index} /> */}
+            <Route path={ROUTES.SIGN_UP} component={SignUp} />
+            <Route path={ROUTES.DASHBOARD} component={Dashboard} />
+            <Route path={ROUTES.BRAND} component={Brand} />
+            <Route path={ROUTES.INFLUENCER} component={Influencer} />
+            <Route path={ROUTES.SCHOOL} component={School} />
+            <Route component={NotFound} />
+          </Switch>
+          <Footer />
+        </Suspense>
       </UserContext.Provider>
     </>
   )

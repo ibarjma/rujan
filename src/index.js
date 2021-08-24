@@ -7,6 +7,7 @@ import './styles/rujan.css'
 import './styles/app.css'
 
 //  fonts
+import { BrowserRouter as Router } from 'react-router-dom'
 
 import './fonts/Blenny.ttf'
 import './fonts/Poppins-Bold.ttf'
@@ -15,7 +16,9 @@ import './fonts/Poppins-Regular.ttf'
 
 ReactDOM.render(
   <FirebaseContext.Provider value={{ firebase, FieldValue }}>
-    <App />
+    <Router>
+      <App />
+    </Router>
   </FirebaseContext.Provider>,
   document.getElementById('root')
 )

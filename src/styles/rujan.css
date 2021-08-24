@@ -76,11 +76,24 @@ body {
   z-index: 1;
 }
 
+.tick {
+  padding-right: 1rem;
+  position: relative;
+  width: 10%;
+  height: auto;
+}
+
+.info {
+  width: 7%;
+  height: auto;
+}
+
 .fuegorosaBrand {
-  left: calc(100% - 50vw);
-  top: calc(100% - 20vw);
-  width: clamp(20rem, 90% - 5vw, 75rem);
+  left: calc(100% - 90vw);
+  top: calc(87% - 30vw);
+  width: 60vw;
   z-index: 1;
+  max-width: 130vw;
 }
 
 .fuego-deforme {
@@ -183,15 +196,63 @@ body {
   height: 60vh;
   background-color: #eb008b;
 }
+
+.cuadradoCeleste {
+  z-index: -2;
+  position: absolute;
+  width: 45vh;
+  height: 60vh;
+  background-color: #29abe2;
+  /* background-color:#62adf1; */
+}
+
 .root-pink {
   background-color: #eb008b;
 }
 
+.cuadradoDesfazado {
+  width: 100%;
+  height: auto;
+}
+
+.infos {
+  width: 100%;
+  height: auto;
+  background-color: yellow;
+  top: -0.1rem;
+  left: -0.1rem;
+}
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.fondoCeleste1 {
+  width: 115vw;
+  height: 100vh;
+  background-color: #62adf1;
+  top: 13vw;
+  left: -10vw;
+  z-index: -10;
+  position: absolute;
+}
+.cuadradoRosita {
+  width: 100%;
+  height: 10rem;
+  background-color: deeppink;
+  top: 1rem;
+  left: 1rem;
+}
 .fuegofooter {
   z-index: 3;
   left: calc(100% - 53vw);
   width: 30%;
   top: calc(100% + 50vw);
+  height: auto;
+}
+.ilus {
+  max-width: 200%;
+  width: 100%;
   height: auto;
 }
 .corona2 {
@@ -221,8 +282,7 @@ body {
   background-color: black;
 }
 .yellow {
-  color: #ffff00;
-  color: rgb(255, 255, 0);
+  color: #ffda00;
 }
 .pink {
   color: #eb008b;
@@ -243,8 +303,8 @@ body {
   font-family: Blenny;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: yellow;
-  text-shadow: yellow -10px 5px;
+  -webkit-text-stroke-color: #ffda00;
+  text-shadow: #ffda00 -10px 5px;
 }
 .blennySpecialPink {
   font-family: Blenny;
