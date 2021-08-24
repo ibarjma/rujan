@@ -1,8 +1,8 @@
 import { useEffect, useState, React } from 'react'
 import Circular from './../components/circular'
-import Corona from '../components/corona'
+import Corona from '../utils/corona'
 import Ask from '../components/ask'
-import AOS from 'aos'
+import Ticklist from '../components/ticklist'
 export default function School() {
   const [isOpen, setIsOpen] = useState({
     id1: false,
@@ -25,20 +25,12 @@ export default function School() {
   useEffect(() => {
     document.body.classList.add('root-pink')
   })
-  useEffect(() => {
-    AOS.init({
-      once: true,
-      disable: 'phone',
-      duration: 700,
-      easing: 'ease-out-cubic',
-    })
-  })
 
   return (
     <div>
-      {/* <img className='fuego' src='images/main/fuego.svg' alt='' /> */}
-      {/* <section className='celeste'></section> */}
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
+        <div className='fondoCeleste1 absolute'></div>
+
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
             <p className='poppinsSemiBold text-2xl pt-4 pb-2'>
@@ -54,27 +46,11 @@ export default function School() {
               INFLUENCIA DIGITAL
             </p>
 
-            <ul className='poppinsSemiBold'>
-              <li>
-                <span className='flex '>
-                  <img className='tick' src='images/school/tick.svg' alt='' />{' '}
-                  <span>Feedback Personalizado</span>
-                </span>
-              </li>
-              <li>
-                <span className='flex '>
-                  <img className='tick' src='images/school/tick.svg' alt='' />{' '}
-                  <span>Flexibilidad horaria</span>
-                </span>
-              </li>
-              <li>
-                <span data-aos='zoom-y-out' className='flex '>
-                  <img className='tick' src='images/school/tick.svg' alt='' />{' '}
-                  <span>Calidad 100% asegurada</span>
-                </span>
-              </li>
-            </ul>
-
+            <Ticklist>
+              <span>Feedback Personalizado</span>
+              <span>Flexibilidad horaria</span>
+              <span>Calidad 100% asegurada</span>
+            </Ticklist>
             <span className='flex '>
               <img
                 className='relative info pr-2'
@@ -192,8 +168,6 @@ export default function School() {
             {/*  */}
           </div>
         </div>
-
-        <div className='fondoCeleste1 absolute'></div>
       </div>
       <div className='my-1 w-full px-2 sm:px-16 relative pt-16 '>
         <div className='relative md:px-4 px-16 py-16'>
@@ -314,162 +288,8 @@ export default function School() {
               </div>
             </div>
           </div>
-
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64 sm:w-1/2 '>
-            <img
-              className='absolute fuegorosa'
-              src='images/main/fuegorosa.svg'
-              alt=''
-            />
-          </div>
-
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64'>
-            <section className='fondoNegro'></section>
-            <p className='relative text-7xl blenny yellow pt-16 flex justify-center text-center'>
-              Sumate a la manada!
-            </p>
-            <p className='relative text-2xl yellow poppinsSemiBold py-8 flex justify-center'>
-              Si eres influencer o quieres ser uno exitoso, esta es tu
-              oportunidad!
-            </p>
-            <p className='relative text-2xl yellow poppinsBold py-8 flex justify-center'>
-              Sé parte del movimiento Rujan, agenda tu horario y participá del
-              casting.
-            </p>
-            <span className='relative text-3xl poppinsSemiBold py-8 flex justify-center'>
-              <button
-                style={{ backgroundColor: 'rgb(255, 255, 50)' }}
-                className='bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded'
-              >
-                INSCRIBITE!
-              </button>
-            </span>
-            <span className='relative text-xl yellow poppinsRegular py-8 flex justify-center'>
-              <span>Ver términos y condiciones</span>
-            </span>
-            <div className='absolute flex'>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-15rem',
-                  left: '-5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c1.jpg'
-                color='celeste'
-              ></Corona>
-              <Corona
-                style={{ position: 'relative', top: '-10rem', zIndex: '-1' }}
-                imagen='c2.jpg'
-                color='rosa'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-2rem',
-                  left: '-17.5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c33.jpg'
-                color='celeste'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-10rem',
-                  left: '27.5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c4.jpg'
-                color='rosa'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-2rem',
-                  left: '10rem',
-                  zIndex: '-1',
-                }}
-                imagen='c5.jpg'
-                color='celeste'
-              ></Corona>
-            </div>
-          </div>
-
-          <div class='my-1 w-full px-2 sm:px-16  h-64 sm:w-1/2'>
-            <p></p>
-          </div>
-
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-            <img
-              className='absolute fuego-deforme'
-              src='images/main/fuego-deforme.svg'
-              alt=''
-            />
-          </div>
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-            <img
-              src='images/main/footer.svg'
-              className='absolute fuegofooter'
-              alt=''
-            />
-          </div>
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-          </div>
-          <div class='my-1 w-full px-2 sm:px-16'>
-            <div style={{ zIndex: -1 }} className='relative'>
-              <p className='blenny text-9xl yellow z-10'>FAQ</p>
-              <span className='absolute celestito'></span>
-            </div>
-            <div className='pb-16 mb-16'>
-              <Ask
-                ask='¿Cómo me inscribo'
-                id='id1'
-                response='En cada Nivel tienes la opción de abonar la totalidad del curso o el módulo que quieras.'
-                isOpen={id1}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Otorgan certificados al finalizar el curso?'
-                id='id2'
-                response='Sí, el certificado es digital y para recibirlo tienes que haber cumplido con los siguientes requisitos:'
-                isOpen={id2}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Cuál es el rol de los tutores?'
-                id='id3'
-                response='jorge'
-                isOpen={id3}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Cuándo se realizan los Workshops?'
-                id='id4'
-                response='jorge'
-                isOpen={id4}
-                toggle={toggle}
-              />
-
-              <Ask
-                ask='¿Qué es Rujan?'
-                id='id5'
-                response='jorge'
-                isOpen={id5}
-                toggle={toggle}
-              />
-            </div>
-          </div>
         </div>
       </div>
     </div>
-    /* <img
-        className='inline xl:w-3/6 xl:h-3/6 lg:w-3/6 lg:h-3/6 sm:w-3/6 sm:h-3/6 w-3/6 h-3/6'
-        src='images/main/Recurso 2.png'
-        alt=''
-      /> */
   )
 }

@@ -8,7 +8,6 @@
   font-family: 'PoppinsSemiBold';
   src: local('PoppinsSemiBold'),
     url('./../fonts/Poppins-SemiBold.ttf') format('truetype');
-  /* font-weight:  bold ; */
 }
 
 @font-face {
@@ -136,19 +135,12 @@ body {
   background-color: yellow;
 }
 
-/* .celeste {
-  background-image: url(./../assets/images/formaceleste_1.png);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-} */
-
 .fondoNegro {
   background-color: black;
   position: absolute;
   left: -30vw;
   width: 130vw;
-  height: 260%;
+  height: 130%;
   z-index: -2;
 }
 
@@ -231,7 +223,7 @@ body {
   width: 115vw;
   height: 100vh;
   background-color: #62adf1;
-  top: 13vw;
+  top: 0rem;
   left: -10vw;
   z-index: -10;
   position: absolute;

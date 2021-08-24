@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-const Dropdown = ({ isOpen, toggle }) => {
+const Dropdown2 = ({ isOpen, toggle }) => {
   return (
     <div
       className={
@@ -33,4 +33,4 @@ const Dropdown = ({ isOpen, toggle }) => {
   )
 }
 
-export default Dropdown
+export default Dropdown2

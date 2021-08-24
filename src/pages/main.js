@@ -1,27 +1,9 @@
-import { useEffect, useState, React } from 'react'
+import { useEffect, React } from 'react'
 import Circular from './../components/circular'
-import Corona from '../components/corona'
-import Ask from '../components/ask'
+import Faq from '../components/faq'
+import Manada from '../components/manada'
 
 export default function Main() {
-  const [isOpen, setIsOpen] = useState({
-    id1: false,
-    id2: false,
-    id3: false,
-    id4: false,
-    id5: false,
-  })
-  const { id1, id2, id3, id4, id5 } = isOpen
-
-  const toggle = (e) => {
-    let id = e.target.id
-    console.log(id)
-    setIsOpen({
-      ...isOpen,
-      [id]: !isOpen[id],
-    })
-  }
-
   useEffect(() => {
     document.body.classList.add('root-pink')
   })
@@ -204,146 +186,21 @@ export default function Main() {
             />
           </div>
 
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64'>
-            <section className='fondoNegro'></section>
-            <p className='relative text-7xl blenny yellow pt-16 flex justify-center text-center'>
-              Sumate a la manada!
-            </p>
-            <p className='relative text-2xl yellow poppinsSemiBold py-8 flex justify-center'>
-              Si eres influencer o quieres ser uno exitoso, esta es tu
-              oportunidad!
-            </p>
-            <p className='relative text-2xl yellow poppinsBold py-8 flex justify-center'>
-              Sé parte del movimiento Rujan, agenda tu horario y participá del
-              casting.
-            </p>
-            <span className='relative text-3xl poppinsSemiBold py-8 flex justify-center'>
-              <button
-                style={{ backgroundColor: 'rgb(255, 255, 50)' }}
-                className='bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded'
-              >
-                INSCRIBITE!
-              </button>
-            </span>
-            <span className='relative text-xl yellow poppinsRegular py-8 flex justify-center'>
-              <span>Ver términos y condiciones</span>
-            </span>
-            <div className='absolute flex'>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-15rem',
-                  left: '-5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c1.jpg'
-                color='celeste'
-              ></Corona>
-              <Corona
-                style={{ position: 'relative', top: '-10rem', zIndex: '-1' }}
-                imagen='c2.jpg'
-                color='rosa'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-2rem',
-                  left: '-17.5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c33.jpg'
-                color='celeste'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-10rem',
-                  left: '27.5rem',
-                  zIndex: '-1',
-                }}
-                imagen='c4.jpg'
-                color='rosa'
-              ></Corona>
-              <Corona
-                style={{
-                  position: 'relative',
-                  top: '-2rem',
-                  left: '10rem',
-                  zIndex: '-1',
-                }}
-                imagen='c5.jpg'
-                color='celeste'
-              ></Corona>
-            </div>
-          </div>
+          <Manada></Manada>
 
-          <div class='my-1 w-full px-2 sm:px-16  h-64 sm:w-1/2'>
-            <p></p>
-          </div>
+          {/* <img
+            className='absolute fuego-deforme'
+            src='images/main/fuego-deforme.svg'
+            alt=''
+          />
 
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-            <img
-              className='absolute fuego-deforme'
-              src='images/main/fuego-deforme.svg'
-              alt=''
-            />
-          </div>
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-            <img
-              src='images/main/footer.svg'
-              className='absolute fuegofooter'
-              alt=''
-            />
-          </div>
-          <div class='relative my-1 w-full px-2 sm:px-16 h-64  sm:w-1/2'>
-            <p></p>
-          </div>
-          <div class='my-1 w-full px-2 sm:px-16'>
-            <div style={{ zIndex: -1 }} className='relative'>
-              <p className='blenny text-9xl yellow z-10'>FAQ</p>
-              <span className='absolute celestito'></span>
-            </div>
-            <div className='pb-16 mb-16'>
-              <Ask
-                ask='¿Cómo me inscribo'
-                id='id1'
-                response='En cada Nivel tienes la opción de abonar la totalidad del curso o el módulo que quieras.'
-                isOpen={id1}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Otorgan certificados al finalizar el curso?'
-                id='id2'
-                response='Sí, el certificado es digital y para recibirlo tienes que haber cumplido con los siguientes requisitos:'
-                isOpen={id2}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Cuál es el rol de los tutores?'
-                id='id3'
-                response='jorge'
-                isOpen={id3}
-                toggle={toggle}
-              />
-              <Ask
-                ask='¿Cuándo se realizan los Workshops?'
-                id='id4'
-                response='jorge'
-                isOpen={id4}
-                toggle={toggle}
-              />
+          <img
+            src='images/main/footer.svg'
+            className='absolute fuegofooter'
+            alt=''
+          /> */}
 
-              <Ask
-                ask='¿Qué es Rujan?'
-                id='id5'
-                response='jorge'
-                isOpen={id5}
-                toggle={toggle}
-              />
-            </div>
-          </div>
+          <Faq></Faq>
         </div>
       </div>
     </div>
