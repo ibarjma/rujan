@@ -1,36 +1,18 @@
-import { useEffect, useState, React } from 'react'
-import Circular from './../components/circular'
-import Corona from '../utils/corona'
-import Ask from '../components/ask'
+import { useEffect, React } from 'react'
 import Ticklist from '../components/ticklist'
+import Faq from '../components/faq'
+import Nosrecomiendan from '../components/school/nosrecomiendan'
+import Compromiso from '../components/school/compromiso'
 export default function School() {
-  const [isOpen, setIsOpen] = useState({
-    id1: false,
-    id2: false,
-    id3: false,
-    id4: false,
-    id5: false,
-  })
-  const { id1, id2, id3, id4, id5 } = isOpen
-
-  const toggle = (e) => {
-    let id = e.target.id
-    console.log(id)
-    setIsOpen({
-      ...isOpen,
-      [id]: !isOpen[id],
-    })
-  }
-
   useEffect(() => {
     document.body.classList.add('root-pink')
   })
 
   return (
     <div>
+      {/* fondos */}
+      <div className='fondoCeleste1 absolute'></div>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
-        <div className='fondoCeleste1 absolute'></div>
-
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
             <p className='poppinsSemiBold text-2xl pt-4 pb-2'>
@@ -104,79 +86,8 @@ export default function School() {
           </div>
         </div>
       </div>
-
-      <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto my-1 px-2 sm:px-16 px-32 relative pt-16 '>
-        <div className='cuadradoDesfazado relative'>
-          <div className='cuadradoRosita absolute '></div>
-          <div className='infos flex  absolute'>
-            <div className='flex z-10'>
-              <div className='block'>
-                <div className='flex p-4'>
-                  <span className='p-2'>
-                    <img
-                      className='icon'
-                      src='images/school/dolar.svg'
-                      alt=''
-                    />
-                  </span>
-                  <span>PRECIO ACCESIBLE</span>
-                </div>
-                <p className='p-4'>
-                  Tenemos un plan de Becas al mérito para les creators que se
-                  comprometan con la Escuela y la metodología del curso
-                </p>
-              </div>
-            </div>
-            {/*  */}
-            <div className='flex z-10'>
-              <div className='block'>
-                <div className='flex p-4'>
-                  <span className='p-2'>
-                    <img
-                      className='icon'
-                      src='images/school/estrella.svg'
-                      alt=''
-                    />
-                  </span>
-                  <span>PRECIO ACCESIBLE</span>
-                </div>
-                <p className='p-4'>
-                  Tenemos un plan de Becas al mérito para les creators que se
-                  comprometan con la Escuela y la metodología del curso
-                </p>
-              </div>
-            </div>
-            {/*  */}
-            <div className='flex z-10'>
-              <div className='block'>
-                <div className='flex p-4'>
-                  <span className='p-2'>
-                    <img
-                      className='icon'
-                      src='images/school/tutor.svg'
-                      alt=''
-                    />
-                  </span>
-                  <span>PRECIO ACCESIBLE</span>
-                </div>
-                <p className='p-4'>
-                  Tenemos un plan de Becas al mérito para les creators que se
-                  comprometan con la Escuela y la metodología del curso
-                </p>
-              </div>
-            </div>
-            {/*  */}
-          </div>
-        </div>
-      </div>
-      <div className='my-1 w-full px-2 sm:px-16 relative pt-16 '>
-        <div className='relative md:px-4 px-16 py-16'>
-          <p className='flex justify-center yellow blenny yellow text-3xl text-center py-16'>
-            NUESTRES ESTUDIANTES NOS RECOMIENDAN!
-          </p>
-        </div>
-      </div>
-
+      <Nosrecomiendan></Nosrecomiendan>
+      <Compromiso></Compromiso>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
@@ -199,95 +110,7 @@ export default function School() {
               método KOC y KOL.
             </p>
           </div>
-          <div class='relative my-1 w-full px-2 sm:px-16  sm:w-1/2'>
-            <img
-              className='absolute cuadradoceleste'
-              src='images/main/formaceleste_1.png'
-              alt=''
-            />
-            <p className='poppinsSemiBold yellow text-5xl pt-16 pb-8'>
-              Una nueva forma <br />
-              <p className='py-4'>de trabajar!</p>
-            </p>
-            <p className='poppinsSemiBold'>
-              No hace falta ir a una oficina, ni viajar, ni volver, ni salir, ni
-              llegar. Si algo trajo la tecnología es la libertad de
-              oportunidades, la libertad de tus tiempos y de tus espacios
-              personales.
-            </p>
-            <p className='poppinsSemiBold'>
-              Y en este mundo nuevo hay espacio para lo que quieras hacer, para
-              tus ideas, para tu pasión, para tu progreso y por supuesto para tu
-              éxito.
-            </p>
-            <p className='poppinsSemiBold yellow'>
-              No llegamos para cambiar el mundo, llegamos para invitarte a ser
-              parte de este mundo nuevo.
-            </p>
-          </div>
-
-          <div class='my-1 w-full px-2 pt-16 sm:px-16  sm:w-1/2'>
-            <div className='cuadradoGrande'>
-              <div
-                style={{ width: '100%', height: '130%' }}
-                className='my-1 w-full px-2 sm:px-16  sm:w-1/2 cuadradoAma'
-              ></div>
-              <img className='img9' src='images/main/img9.png' alt='' />
-            </div>
-          </div>
-
-          <div class='relative my-1 w-full px-2 sm:px-16  sm:w-1/2 relative top-20'>
-            <img
-              src='images/main/coronaRosa.svg'
-              className='absolute corona'
-              alt=''
-            />
-            <img
-              className='absolute pancho'
-              src='images/main/pancho.jpg'
-              alt=''
-            />
-
-            <div
-              style={{ height: '10vw' }}
-              class='my-1 w-full px-2 sm:px-16 sm:w-1/2'
-            >
-              <p></p>
-            </div>
-
-            <div className='blennySpecialPink text-6xl nowrap relative'>
-              <p className='py-2'>FEEL REAL</p>
-              <p className='py-2'>PLAY HARD</p>
-              <p className='py-2'>KEEP STRONG</p>
-            </div>
-
-            <div className='poppinsRegular relative top-2'>
-              <div
-                style={{
-                  width: '60%',
-                  fontFamily: 'PoppinsSemiBold',
-                  paddingBottom: '28vw',
-                }}
-              >
-                <p>
-                  Estos son nuestros pilares de trabajo.{' '}
-                  <span className='poppinsBold'>
-                    Ser auténticos, reales y transmitir nuestra pasión.
-                  </span>{' '}
-                </p>
-                <p>
-                  Trabajar para mejorar siempre y evolucionar. Descubrir,
-                  aprender y analizar.
-                </p>
-                <p>
-                  Y en ellos, en tu disciplina y en tus ganas,{' '}
-                  <span className='poppinsBold'>
-                    están las puertas del éxito.
-                  </span>
-                </p>
-              </div>
-            </div>
-          </div>
+          <Faq></Faq>
         </div>
       </div>
     </div>

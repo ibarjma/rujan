@@ -21,7 +21,7 @@ export default function Faq() {
     })
   }
   return (
-    <div class='my-1 w-full pt-16 px-4 mx-4 mt-32'>
+    <div class='my-1 w-full sm:px-16 pt-16 px-4 mx-4 mt-32'>
       <div style={{ zIndex: -1 }} className='relative'>
         <p className='blenny text-9xl yellow z-10'>FAQ</p>
         <span className='absolute celestito'></span>

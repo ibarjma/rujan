@@ -213,20 +213,32 @@ body {
   background-color: yellow;
   top: -0.1rem;
   left: -0.1rem;
+  display: block;
+}
+@media (min-width: 740px) {
+  .infos {
+    display: flex;
+  }
 }
 .icon {
   width: 2rem;
   height: 2rem;
 }
 
-.fondoCeleste1 {
-  width: 115vw;
-  height: 100vh;
+.nosreco {
   background-color: #62adf1;
-  top: 0rem;
-  left: -10vw;
-  z-index: -10;
-  position: absolute;
+}
+.compromiso {
+  background-color: black;
+  top: -1rem;
+}
+
+.cita {
+  background: url('../assets/images/formitacita.png') no-repeat;
+  position: relative;
+  border-radius: 2rem;
+  background-size: 200% 150%;
+  background-position-x: center;
 }
 .cuadradoRosita {
   width: 100%;
@@ -235,6 +247,13 @@ body {
   top: 1rem;
   left: 1rem;
 }
+
+@media (min-width: 950px) {
+  .cuadradoRosita {
+    height: 13rem;
+  }
+}
+
 .fuegofooter {
   z-index: 3;
   left: calc(100% - 53vw);
