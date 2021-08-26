@@ -3,13 +3,14 @@ import Ticklist from '../components/ticklist'
 import Faq from '../components/faq'
 import Nosrecomiendan from '../components/school/nosrecomiendan'
 import Compromiso from '../components/school/compromiso'
+import Online from '../components/school/online'
 export default function School() {
   useEffect(() => {
     document.body.classList.add('root-pink')
   })
 
   return (
-    <div>
+    <>
       {/* fondos */}
       <div className='fondoCeleste1 absolute'></div>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
@@ -88,6 +89,7 @@ export default function School() {
       </div>
       <Nosrecomiendan></Nosrecomiendan>
       <Compromiso></Compromiso>
+      <Online></Online>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
@@ -113,6 +115,6 @@ export default function School() {
           <Faq></Faq>
         </div>
       </div>
-    </div>
+    </>
   )
 }

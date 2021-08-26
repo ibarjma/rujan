@@ -1,17 +1,26 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-const Ticklist = ({ children, style }) => {
-  console.log([...children][0].props.children)
+const Ticklist = ({ children, sub }) => {
   return (
     <>
       <ul className='poppinsSemiBold'>
         {children.map((element) => (
-          <li>
-            <span className='flex '>
-              <img className='tick' src='images/school/tick.svg' alt='' />{' '}
+          <l className='p-2'>
+            <span
+              className='flex items-center
+             '
+            >
+              <img
+                className='tick p-2 ml-2'
+                src='images/school/tick.svg'
+                alt=''
+              />{' '}
               <p>{element.props.children}</p>
             </span>
-          </li>
+            <p className='poppinsRegular italic text-sm p-2'>
+              {element.props.sub}
+            </p>
+          </l>
         ))}
       </ul>
     </>

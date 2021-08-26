@@ -3,16 +3,16 @@ import Amodal from '../amodal'
 
 const Compromiso = () => {
   return (
-    <div className='compromiso relative yellow '>
-      <div className='relative px-3 py-3  max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
+    <div className='compromiso py-16 relative yellow '>
+      <div className='relative px-3  max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
-            <div className='poppinsBold'>
+            <div className='poppinsBold text-2xl'>
               <span>PREMIAMOS TU</span>
 
-              <span> COMPROMISO </span>
+              <span style={{ color: '#29abe2' }}> COMPROMISO </span>
               <br></br>
-              <div className='self-center flex'>
+              <div className='items-center flex'>
                 <span>CON</span>
                 <span className='blenny text-8xl relative top-6'> RUJAN</span>
               </div>
@@ -33,9 +33,11 @@ const Compromiso = () => {
               con becas.{' '}
             </p>
           </div>
-          <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
-            ¿COMO FUNCIONA LA BECA?
-            <Amodal></Amodal>
+          <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2 '>
+            <span className='poppinsBold yellow text-3xl'>
+              ¿CÓMO FUNCIONA LA BECA?
+            </span>
+            <Amodal fondo='yellow' delante='#29abe2'></Amodal>
           </div>
         </div>
       </div>
