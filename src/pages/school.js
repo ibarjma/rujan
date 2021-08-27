@@ -40,7 +40,7 @@ export default function School() {
                 src='images/school/info.svg'
                 alt=''
               />{' '}
-              <span>
+              <span className='italic text-sm'>
                 Prueba una clase y si no te gusta te devolvemos el dinero.
               </span>
             </span>
@@ -49,7 +49,7 @@ export default function School() {
               <div className='flex justify-center px-4'>
                 <button
                   style={{ backgroundColor: 'yellow', color: '#eb008b' }}
-                  className=' bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded mt-16 '
+                  className=' bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded mt-16 whitespace-   nowrap'
                 >
                   VER CURSOS
                 </button>
@@ -60,13 +60,13 @@ export default function School() {
                     style={{ backgroundColor: '#eb008b' }}
                     className='font-bold py-2 px-4 rounded mt-16 border-solid yellow'
                   >
-                    <span className='flex align-items center'>
+                    <span className='flex align-items center border-2 border-yellow-500 rounded-md'>
                       <img
-                        className='relative info pr-2'
+                        className='relative info ml-4'
                         src='images/school/info.svg'
                         alt=''
                       />{' '}
-                      <span>Tienes dudas? Escríbenos!</span>
+                      <span className=''>Tienes dudas? Escríbenos!</span>
                     </span>
                   </button>
                 </div>

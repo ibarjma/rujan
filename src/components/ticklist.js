@@ -6,10 +6,7 @@ const Ticklist = ({ children, sub }) => {
       <ul className='poppinsSemiBold'>
         {children.map((element) => (
           <l className='p-2'>
-            <span
-              className='flex items-center
-             '
-            >
+            <span className='flex items-center'>
               <img
                 className='tick p-2 ml-2'
                 src='images/school/tick.svg'
@@ -17,9 +14,13 @@ const Ticklist = ({ children, sub }) => {
               />{' '}
               <p>{element.props.children}</p>
             </span>
-            <p className='poppinsRegular italic text-sm p-2'>
-              {element.props.sub}
-            </p>
+            {element.props.sub != undefined ? (
+              <div className='poppinsRegular italic text-sm p-2'>
+                <p>{element.props.sub}</p>
+              </div>
+            ) : (
+              <span></span>
+            )}
           </l>
         ))}
       </ul>
