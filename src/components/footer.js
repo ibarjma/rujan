@@ -34,40 +34,43 @@ export default function Footer() {
             <OlaFooter location={location.pathname}></OlaFooter>
             <div
               style={{ position: 'relative', top: '10vw', left: '-2.5rem' }}
-              className='block pt-8 w-max relative py-3 max-w-screen-sm lg:max-w-6xl md:max-w-3xl sm:max-w-3xl sm:mx-2 mx-auto'
+              className='block px-3 pt-8 w-max relative py-3 max-w-screen-sm lg:max-w-6xl md:max-w-3xl sm:max-w-3xl sm:mx-2 mx-auto'
             >
               <h1
                 style={{ color: '#00AEF4' }}
-                className='poppinsBold lg:text-5xl md:text-3xl text-center'
+                className='poppinsBold lg:text-5xl md:text-4xl text-center'
               >
                 Contactanos!
               </h1>
               <div className='flex justify-between items-center '>
                 <img
-                  className='p-4 max-h-xs '
+                  className='p-4 max-h-20 '
                   src='images/footer/tiktok.png'
                 ></img>
                 <img
-                  className='p-4 max-h-xs'
+                  className='p-4 max-h-20'
                   src='images/footer/instagram.png'
                 ></img>
                 <img
-                  className='p-4 max-h-xs'
+                  className='p-4 max-h-20'
                   src='images/footer/youtube.png'
                 ></img>
                 <img
-                  className='p-4 max-h-xs'
+                  className='p-4 max-h-20'
                   src='images/footer/facebook.png'
                 ></img>
                 <img
-                  className='p-4 max-h-xs'
+                  className='p-4 max-h-20'
                   src='images/footer/twitch.png'
                 ></img>
               </div>
               <div className='flex justify-around items-center'>
                 <span>
                   {' '}
-                  <img src='images/footer/mail.png'></img>
+                  <img
+                    className='p-4 max-h-20'
+                    src='images/footer/mail.png'
+                  ></img>
                 </span>
                 <span className='poppinsRegular'>
                   rujanscouter.es@gmail.com

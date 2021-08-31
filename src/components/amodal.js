@@ -1,7 +1,7 @@
 import React from 'react'
 import Ticklist from './ticklist'
 
-const Amodal = ({ fondo, delante }) => {
+const Amodal = ({ fondo, delante, list, title, tick, id }) => {
   return (
     <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
       <div className='cuadradoDesfazado h-full w-full sm:w-full relative'>
@@ -13,15 +13,23 @@ const Amodal = ({ fondo, delante }) => {
           style={{ backgroundColor: `${delante}` }}
           className='relative z-10 round'
         >
+          <h1 className='flex justify-center text-3xl poppinsBold p-8'>
+            {title}
+          </h1>
           <Ticklist>
-            <span> Eliges el curso o Workshop que quieras hacer.</span>
-            <span> Seleccionas la fecha que más te convenga.</span>
-            <span sub='*80% de asistencia a las clases en vivo, entrega en tiempo y forma de todos los desafíos y proyecto final. '>
-              Te comprometes con los requisitos.
-            </span>
-            <span>
-              ¡Ya puedes inscribirte al curso abonando el 30% del valor!
-            </span>
+            {list.map((element, index) => (
+              <span
+                img={tick}
+                key={index}
+                sub={
+                  id == 1 && index == 2
+                    ? '*80% de asistencia a las clases en vivo, entrega en tiempo y forma de todos los desafíos y proyecto final'
+                    : ''
+                }
+              >
+                {element}
+              </span>
+            ))}
           </Ticklist>
         </div>
       </div>

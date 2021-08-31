@@ -81,6 +81,7 @@ body {
   position: relative;
   width: 10%;
   height: auto;
+  max-width: 40px;
 }
 
 .info {
@@ -104,7 +105,7 @@ body {
 }
 
 .celestito {
-  background-color: #29abe2;
+  background-color: #00aef4;
   width: 17.5rem;
   height: 3rem;
   bottom: 2rem;
@@ -137,7 +138,7 @@ body {
   position: absolute;
   width: 45vh;
   height: 40vh;
-  background-color: yellow;
+  background-color: #fbe216;
 }
 
 .fondoNegro {
@@ -150,7 +151,7 @@ body {
 }
 
 .fondoCeleste {
-  background-color: #62adf1;
+  background-color: #00aef4;
   position: absolute;
   left: -30vw;
   width: 130vw;
@@ -194,13 +195,17 @@ body {
   background-color: #eb008b;
 }
 
+.celesteLetra {
+  color: #00aef4;
+}
+
 .cuadradoCeleste {
   z-index: -2;
   position: absolute;
   width: 45vh;
   height: 60vh;
-  background-color: #29abe2;
-  /* background-color:#62adf1; */
+  background-color: #00aef4;
+  /* background-color:#00aef4; */
 }
 
 .root-pink {
@@ -212,10 +217,66 @@ body {
   height: auto;
 }
 
+.dot {
+  border: solid;
+  color: blue;
+}
+
+.back {
+  position: absolute;
+  left: 0;
+  top: 35%;
+  border: 1px;
+  border-style: solid;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.next {
+  position: absolute;
+  right: 0;
+  top: 35%;
+  border: 1px;
+  border-style: solid;
+  padding-left: 0.8rem;
+  padding-right: 0.8rem;
+}
+
+.curso {
+  height: 100%;
+  border: 2px;
+  border-radius: 25px;
+}
+
+.buttonCategory {
+  text-align: center;
+  border-radius: 5px;
+  background-color: #fbe216;
+  color: black;
+  transition: 0.3s;
+  opacity: 1;
+}
+
+.buttonCategory:hover {
+  opacity: 1;
+  border: solid;
+  border-radius: 25px;
+  background-color: black;
+  color: #fbe216;
+  border-color: #fbe216;
+}
+
+.category {
+  border-color: #00aef4;
+  color: #00aef4;
+  border-radius: 25px;
+  padding: 0.4rem;
+  font-weight: bold;
+}
 .infos {
   width: 100%;
   height: auto;
-  background-color: yellow;
+  background-color: #fbe216;
   top: -0.1rem;
   left: -0.1rem;
   display: block;
@@ -231,7 +292,7 @@ body {
 }
 
 .nosreco {
-  background-color: #62adf1;
+  background-color: #29abe2;
 }
 .compromiso {
   background-color: black;
@@ -245,10 +306,15 @@ body {
   background-size: 200% 150%;
   background-position-x: center;
 }
+
+.cursos {
+  background-color: black;
+  color: #fbe216;
+}
 .cuadradoRosita {
   width: 100%;
   height: 10rem;
-  background-color: deeppink;
+  background-color: #eb008b;
   top: 1rem;
   left: 1rem;
 }
@@ -257,6 +323,10 @@ body {
   .cuadradoRosita {
     height: 13rem;
   }
+}
+
+.buscas {
+  background-color: #29abe2;
 }
 
 .fuegofooter {
@@ -270,6 +340,8 @@ body {
   max-width: 200%;
   width: 100%;
   height: auto;
+
+  filter: drop-shadow(3px 5px rgba(0, 0, 0, 0.42));
 }
 .corona2 {
   width: 70%;
@@ -298,7 +370,7 @@ body {
   background-color: black;
 }
 .yellow {
-  color: #ffda00;
+  color: #fbe216;
 }
 .pink {
   color: #eb008b;
@@ -319,8 +391,8 @@ body {
   font-family: Blenny;
   -webkit-text-fill-color: transparent;
   -webkit-text-stroke-width: 2px;
-  -webkit-text-stroke-color: #ffda00;
-  text-shadow: #ffda00 -10px 5px;
+  -webkit-text-stroke-color: #fbe216;
+  text-shadow: #fbe216 -10px 5px;
 }
 .blennySpecialPink {
   font-family: Blenny;
@@ -336,7 +408,7 @@ body {
 .footer {
   margin-top: 1rem;
   padding: 1rem;
-  background-color: rgb(235, 195, 64);
+  background-color: #fbe216;
   position: inherit;
   bottom: 0;
   left: 0;

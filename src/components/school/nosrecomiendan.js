@@ -19,7 +19,7 @@ const Nosrecomiendan = () => {
       </div>
 
       <div className='my-1 w-full px-2 sm:px-16 relative py-8 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
-        <div className='relative flex md:px-4 px-16'>
+        <div className='relative block md:flex md:px-4 px-16'>
           <Cita nombre='Lucas Gonzales' rol='Estudiante de'></Cita>
           <Cita nombre='Jorge Gonzales' rol='Estudiante de'></Cita>
           <Cita nombre='Juan Gonzales' rol='CEO de'></Cita>

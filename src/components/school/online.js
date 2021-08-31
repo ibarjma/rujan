@@ -9,6 +9,7 @@ const Online = () => {
       </div>
       <Titlefig>
         <span
+          key='1'
           title='Algo'
           descrip='lorem isdlfnasdk aas dnsa d asljd asd asd j sd'
           links={['asda12', ' dwqdqwd ', '812dkjka']}
@@ -16,6 +17,7 @@ const Online = () => {
           href='unadirec'
         ></span>
         <span
+          key='2'
           title='Algo'
           descrip='lorem isdlfnasdk aas dnsa d asljd asd asd j sd'
           links={['asda12', ' dwqdqwd ', '812dkjka']}
@@ -23,6 +25,7 @@ const Online = () => {
           href='unadirec'
         ></span>
         <span
+          key='3'
           title='Algo'
           descrip='lorem isdlfnasdk aas dnsa d asljd asd asd j sd'
           links={['asda12', ' dwqdqwd ', '812dkjka']}

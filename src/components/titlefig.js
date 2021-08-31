@@ -8,7 +8,10 @@ const Titlefig = ({ children }) => {
       <div class='flex flex-wrap mx-1 place-content-center'>
         {children.length !== undefined ? (
           children.map((element) => (
-            <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2 justify-center'>
+            <div
+              key={element.props.id}
+              class='my-1 w-full px-2 sm:px-16  sm:w-1/2 justify-center'
+            >
               <div className='relative'>
                 <div className='title poppinsSemiBold yellow text-xl block justify-center relative'>
                   <h1 className='p-4 pl-8 pt-16'> {element.props.title}</h1>
@@ -26,17 +29,20 @@ const Titlefig = ({ children }) => {
               </div>
               <div className='links '>
                 <Ticklist>
-                  {element.props.links.map((element) => (
-                    <span>{element}</span>
+                  {element.props.links.map((element, index) => (
+                    <span img='images/school/tick.svg' key={index}>
+                      {element}
+                    </span>
                   ))}
                 </Ticklist>
               </div>
               <div className='button flex justify-center mr-16'>
-                <a href={element.props.href}>
-                  <button className='flex justify-center elements-center'>
-                    {element.props.link}
-                  </button>
-                </a>
+                <button
+                  style={{ backgroundColor: '#fbe216', color: '#eb008b' }}
+                  className=' bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded-full mt-16 whitespace-   nowrap'
+                >
+                  <a href={element.props.href}>{element.props.link}</a>
+                </button>
               </div>
             </div>
           ))
@@ -64,12 +70,13 @@ const Titlefig = ({ children }) => {
                 ))}
               </Ticklist>
             </div>
-            <div className='button flex justify-center mr-16'>
-              <a href={children.props.href}>
-                <button className='flex justify-center elements-center'>
-                  {children.props.link}
-                </button>
-              </a>
+            <div className='flex justify-center px-4'>
+              <button
+                style={{ backgroundColor: '#fbe216', color: '#eb008b' }}
+                className=' bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded mt-16 whitespace-   nowrap'
+              >
+                <a href={children.props.href}>{children.props.link}</a>
+              </button>
             </div>
           </div>
         )}

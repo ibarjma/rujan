@@ -2,6 +2,12 @@ import React from 'react'
 import Amodal from '../amodal'
 
 const Compromiso = () => {
+  const listaCompromiso = [
+    'Eliges el Curso o Workshop que quieras hacer.',
+    'Seleccionas la fecha que más te convenga',
+    'Te comprometes con los requisitos',
+    '¡Ya puedes inscribirte al curso abonando el 30% del valor!',
+  ]
   return (
     <div className='compromiso py-16 relative yellow '>
       <div className='relative px-3  max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
@@ -37,7 +43,14 @@ const Compromiso = () => {
             <span className='poppinsBold yellow text-3xl'>
               ¿CÓMO FUNCIONA LA BECA?
             </span>
-            <Amodal fondo='yellow' delante='#29abe2'></Amodal>
+            <Amodal
+              title='CÓMO FUNCIONA LA BECA'
+              fondo='yellow'
+              delante='#29abe2'
+              list={listaCompromiso}
+              tick='images/school/tick.svg'
+              id='1'
+            ></Amodal>
           </div>
         </div>
       </div>
