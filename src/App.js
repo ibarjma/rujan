@@ -106,8 +106,8 @@ function App() {
             <Route path={ROUTES.ABOUT} component={About} />
             <Route component={NotFound} />
           </Switch>
-          <Footer />
         </Suspense>
+        <Footer />
       </UserContext.Provider>
     </>
   )

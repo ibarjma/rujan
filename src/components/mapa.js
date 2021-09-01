@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-function Mapa(props) {
+function Mapa() {
   const countries = [
     'USA',
     'MÉXICO',
@@ -59,7 +59,6 @@ function Mapa(props) {
       switch (index) {
         case 0:
         case 1:
-
         case 3:
         case 6:
           country.setAttribute('x', cx - 130)
@@ -81,7 +80,10 @@ function Mapa(props) {
           address.setAttribute('class', 'address')
           address.innerHTML = addresses[index]
 
-          node.parentNode.append(country, center, city, address)
+          node.parentNode.append(country)
+          node.parentNode.append(center)
+          node.parentNode.append(city)
+          node.parentNode.append(address)
           break
         case 2:
         case 4:
@@ -150,7 +152,6 @@ function Mapa(props) {
       data-name='Capa 1'
       xmlns='http://www.w3.org/2000/svg'
       viewBox='0 0 1366 768'
-      {...props}
     >
       <defs>
         <style>
@@ -160,7 +161,6 @@ function Mapa(props) {
           {'.bold{font-weigth: bold}'}
         </style>
       </defs>
-      <title>{'Mesa de trabajo 1'}</title>
       <path
         className='prefix__cls-1'
         d='M254.63 553.93A18.69 18.69 0 11236 535.25a18.68 18.68 0 0118.68 18.68'

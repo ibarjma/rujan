@@ -15,7 +15,6 @@ export default function Footer() {
       case '/main':
         break
       case '/brand':
-        console.log('brand')
         break
     }
   }, [location])

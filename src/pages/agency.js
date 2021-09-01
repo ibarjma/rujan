@@ -11,7 +11,7 @@ export default function Agency() {
         <div class='my-1 w-full px-2 sm:px-16  '>
           <div class='flex flex-wrap mx-1 place-content-center'>
             <div
-              key='2'
+              key='1'
               class='my-1 w-full px-2 sm:px-16  sm:w-1/2 justify-center'
             >
               <div className='relative'>
@@ -86,7 +86,7 @@ export default function Agency() {
               </div> */}
             </div>
             <div
-              key='2'
+              key='3'
               class='my-1 w-full px-2 sm:px-16  sm:w-1/2 justify-center'
             >
               <div className='relative'>

@@ -1,8 +1,7 @@
-import { React, useEffect, useRef } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { React } from 'react'
+import { Link } from 'react-router-dom'
 
 const Dropdown2 = ({ isOpen, toggle, color }) => {
-  console.log(color)
   return (
     <div
       className={
