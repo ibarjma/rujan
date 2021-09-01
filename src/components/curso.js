@@ -1,4 +1,5 @@
 import React from 'react'
+import Ticklist from './ticklist'
 
 const Curso = ({ category, title, descrip, list }) => {
   return (
@@ -16,11 +17,31 @@ const Curso = ({ category, title, descrip, list }) => {
       {descrip !== undefined ? (
         <div>
           <div className='p-4 text-md'>{descrip}</div>
-
-          <div>{list}</div>
+          <Ticklist>
+            <span img='images/school/chargePink.svg'>{list.charge}</span>
+            <span></span>
+          </Ticklist>
         </div>
       ) : (
-        <div>{list}</div>
+        <div>
+          <Ticklist>
+            {Object.entries(list).map((element) => (
+              <span
+                img={
+                  element[0] == 'calendar'
+                    ? 'images/school/calendar.svg'
+                    : element[0] == 'time'
+                    ? 'images/school/time.svg'
+                    : element[0] == 'charge'
+                    ? 'images/school/charge.svg'
+                    : ''
+                }
+              >
+                {element[1]}
+              </span>
+            ))}
+          </Ticklist>
+        </div>
       )}
       <div className='flex justify-center poppinsBold relative'>
         <button className='buttonCategory p-1 absolute top-0'>

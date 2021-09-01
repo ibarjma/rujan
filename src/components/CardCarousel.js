@@ -22,14 +22,15 @@ const CardCarousel = ({ cursos }) => (
       visibleSlides={3}
     >
       <ButtonBack className='poppinsRegular back text-4xl'>{'<'}</ButtonBack>
-      <Slider>
+      <Slider className='h-auto'>
         {cursos.map((element, index) => (
           <CustomCardSlide
+            // style={{ width: '90%' }}
             content={
               <Curso
                 category={element.category}
                 title={element.title}
-                list={element.list[0]}
+                list={element.list}
                 descrip={element.descrip}
               />
             }

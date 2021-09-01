@@ -114,7 +114,7 @@ const Cursos = () => {
         <div class='flex flex-wrap w-11/12 '>
           <div class=' w-full px-2 sm:px-16  '>
             <div>
-              <Segment className='flex justify-center ' attached='bottom'>
+              <Segment className='flex justify-center' attached='bottom'>
                 <CardCarousel cursos={cursos1} />
               </Segment>
             </div>

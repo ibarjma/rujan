@@ -4,7 +4,12 @@ import React from 'react'
 import { Card } from 'semantic-ui-react'
 
 const CustomCardSlide = ({ index, ...cardProps }) => (
-  <Slide index={index}>
+  <Slide
+    style={{
+      height: 'calc(900px - 40vw)',
+    }}
+    index={index}
+  >
     <div
       style={{
         height: '100%',
