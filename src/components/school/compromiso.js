@@ -20,7 +20,10 @@ const Compromiso = () => {
               <br></br>
               <div className='items-center flex'>
                 <span>CON</span>
-                <span className='blenny text-8xl relative top-6'> RUJAN</span>
+                <span className='blenny text-7xl sm:text-8xl relative top-6 pl-2'>
+                  {' '}
+                  RUJAN
+                </span>
               </div>
             </div>
             <p>
@@ -39,10 +42,10 @@ const Compromiso = () => {
               con becas.{' '}
             </p>
           </div>
-          <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2 '>
-            <span className='poppinsBold yellow text-3xl'>
+          <div class=' w-full sm:px-2 px-4 sm:w-1/2 '>
+            {/* <span className='poppinsBold yellow text-3xl'>
               ¿CÓMO FUNCIONA LA BECA?
-            </span>
+            </span> */}
             <Amodal
               title='CÓMO FUNCIONA LA BECA'
               fondo='yellow'

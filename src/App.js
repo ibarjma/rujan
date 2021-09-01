@@ -22,13 +22,16 @@ const Main = lazy(() => import('./pages/main'))
 const Brand = lazy(() => import('./pages/brand'))
 const Influencer = lazy(() => import('./pages/influencer'))
 const School = lazy(() => import('./pages/school'))
+const Agency = lazy(() => import('./pages/agency'))
+const Shopstreaming = lazy(() => import('./pages/shopstreaming'))
+const About = lazy(() => import('./pages/about'))
 // const Index = lazy(() => import('./pages/index'))
 
 function App() {
   const { user } = useAuthListener()
-
+  const dropRef = useRef()
   const [isOpen, setIsOpen] = useState(false)
-
+  const [isColor, setColor] = useState('black')
   const location = useLocation()
 
   const toggle = () => {
@@ -61,13 +64,34 @@ function App() {
     focusHandling('outline')
   }, [location.pathname]) // triggered on route change
 
+  useEffect(() => {
+    let loc = location.pathname
+    console.log(loc)
+    switch (loc) {
+      case '/main':
+        setColor('blackFont')
+        break
+      case ('/brand', '/influencer'):
+        setColor('yellow')
+        break
+      case '/shopstreaming':
+        setColor('yellow')
+        break
+    }
+  }, [location])
+
   return (
     //  usar un PROVIDER
     <>
       <UserContext.Provider value={{ user }}>
         <Suspense fallback={<ReactLoader />}>
           <Header toggle={toggle} />
-          <Dropdown isOpen={isOpen} toggle={toggle} />
+          <Dropdown
+            isOpen={isOpen}
+            toggle={toggle}
+            color={isColor}
+            ref={dropRef}
+          />
           <Switch>
             <Route path={ROUTES.LOGIN} component={Login} />
             <Route path={ROUTES.MAIN} component={Main} />
@@ -77,6 +101,9 @@ function App() {
             <Route path={ROUTES.BRAND} component={Brand} />
             <Route path={ROUTES.INFLUENCER} component={Influencer} />
             <Route path={ROUTES.SCHOOL} component={School} />
+            <Route path={ROUTES.AGENCY} component={Agency} />
+            <Route path={ROUTES.SHOPSTREAMING} component={Shopstreaming} />
+            <Route path={ROUTES.ABOUT} component={About} />
             <Route component={NotFound} />
           </Switch>
           <Footer />

@@ -187,6 +187,12 @@ body {
   background-color: black;
 }
 
+.agency {
+  font-style: bold;
+}
+.root-cel {
+  background-color: #29abe2;
+}
 .cuadradoRosa {
   z-index: -2;
   position: absolute;
@@ -341,7 +347,7 @@ body {
   width: 100%;
   height: auto;
 
-  filter: drop-shadow(3px 5px rgba(0, 0, 0, 0.42));
+  /* filter: drop-shadow(3px 5px rgba(0, 0, 0, 0.42)); */
 }
 .corona2 {
   width: 70%;

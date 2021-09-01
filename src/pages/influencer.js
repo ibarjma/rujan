@@ -3,6 +3,7 @@ import React, { useEffect } from 'react'
 const Influencer = () => {
   useEffect(() => {
     document.body.classList.remove('root-pink')
+    document.body.classList.remove('root-cel')
     document.body.classList.add('root-black')
   })
   return (

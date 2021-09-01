@@ -16,6 +16,20 @@ const OlaFooter = ({ location }) => {
           alt=''
         />
       )
+    case '/agency':
+      return (
+        <img
+          style={{
+            position: 'absolute',
+            top: '-0.3vw',
+            left: '-5vw',
+            width: '105vw',
+            maxWidth: '200%',
+          }}
+          src='images/footer/footerCelesteO.svg'
+          alt=''
+        />
+      )
     case '/main':
       return (
         <img

@@ -16,6 +16,7 @@ export default function Header({ toggle }) {
     agencia: '/agencia',
     shop: '/shopstreaming',
     about: '/about',
+    agency: '/agency',
   })
   const headerRef = useRef()
   const history = useHistory()
@@ -42,7 +43,7 @@ export default function Header({ toggle }) {
   }, [location])
 
   console.log(headerRef.current)
-  // console.log(document.getElementById('header').classList)
+
   return (
     <>
       <header className='container mx-auto flex flex-wrap p-5 flex-col items-center'>
@@ -180,13 +181,13 @@ export default function Header({ toggle }) {
               <Link className='z-10 px-4' to='/school'>
                 RUJAN SCHOOL
               </Link>
-              <Link className='z-10 px-4' to='/'>
+              <Link className='z-10 px-4' to='/agency'>
                 AGENCIA
               </Link>
-              <Link className='z-10 px-4' to='/'>
+              <Link className='z-10 px-4' to='/shopstreaming'>
                 SHOPSTREAMING
               </Link>
-              <Link className='z-10 px-4' to='/'>
+              <Link className='z-10 px-4' to='/about'>
                 QUIENES SOMOS
               </Link>
             </div>

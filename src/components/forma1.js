@@ -19,7 +19,7 @@ const Forma1 = ({ location }) => {
           />
         </div>
       )
-    case '/influencer':
+    case ('/influencer', '/agency'):
       return (
         <div>
           <img

@@ -8,7 +8,7 @@ const Ticklist = ({ children }) => {
           <l className='p-2'>
             <span className='flex items-center'>
               <img className='tick p-2 mx-2 ' src={element.props.img} alt='' />{' '}
-              <p>{element.props.children}</p>
+              <p className='pr-4'>{element.props.children}</p>
             </span>
             {element.props.sub != undefined ? (
               <div className='poppinsRegular italic text-sm p-2'>

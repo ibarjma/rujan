@@ -4,7 +4,7 @@ const Cita = ({ nombre, rol }) => {
   return (
     <div className='cita relative px-4 py-4 my-4 mx-4'>
       <p className='pink poppinsSemiBold italic px-4 pt-4 text-9xl'> “ </p>
-      <p className='poppinsSemiBold px-2 py-2 mb-8'>
+      <p className='poppinsRegular px-2 py-2 mb-8'>
         {' '}
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem iusto,
         delectus voluptates, quis facilis quae enim, recusandae aliquam error
