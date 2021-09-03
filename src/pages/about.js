@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section className='relative'>
       {/* fondos */}
-      <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
+      <div className='relative px-3 pt-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
         <div class='flex flex-wrap -mx-1 '>
           <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2'>
             <p className='poppinsSemiBold text-3xl pt-4 pb-2'>
@@ -82,7 +82,7 @@ export default function About() {
           <div className='my-1 w-full px-2 sm:px-16 relative sm:w-1/2'>
             <div className='relative right-16 md:px-4 px-16 py-16 foto2'>
               <img
-                className='absolute'
+                className='relative '
                 src={`images/about/about2.png`}
                 alt=''
               />
@@ -106,10 +106,6 @@ export default function About() {
               PLAY HARD <br />
               KEEP GOING <br />
             </p>
-          </div>
-          <div class='relative my-1 w-full px-2 sm:px-16  sm:w-1/2'></div>
-
-          <div class='my-1 w-full px-2 sm:px-16  sm:w-1/2 '>
             <p className='poppinsSemiBold  pl-2 pr-8 pb-4'>
               Estos son nuestros pilares de trabajo. Ser auténticos, reales
               ,transmitir nuestra pasión.
@@ -127,10 +123,49 @@ export default function About() {
       </div>
 
       <section id='sectionCel' className='relative'>
-        <img src='images/about/cel.svg' className='relative top-5' alt='' />
-        <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
+        <img src='images/about/cel.svg' className='absolute bottom-0' alt='' />
+        <div className='relative px-3 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto z-10'>
           <div class='flex flex-wrap -mx-1 '>
-            <div class='my-1 w-full px-2 sm:px-16 '></div>
+            <div class='my-1 w-full px-2 sm:px-16 mt-32 pt-32'>
+              <div className='relative'>
+                <img src='images/main/coronaAma.svg' id='coronitaAma' alt='' />
+                <h1 className='flex justify-center poppinsBold yellow text-6xl'>
+                  EQUIPO RUJAN
+                </h1>
+              </div>
+            </div>
+            <div class='my-1 w-full px-2 sm:px-16 mt-32 p-32'>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                autem provident quae enim hic exercitationem, temporibus labore
+                facilis aliquid a beatae id reprehenderit recusandae dolor natus
+                eveniet voluptatem rerum eius.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                autem provident quae enim hic exercitationem, temporibus labore
+                facilis aliquid a beatae id reprehenderit recusandae dolor natus
+                eveniet voluptatem rerum eius.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                autem provident quae enim hic exercitationem, temporibus labore
+                facilis aliquid a beatae id reprehenderit recusandae dolor natus
+                eveniet voluptatem rerum eius.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                autem provident quae enim hic exercitationem, temporibus labore
+                facilis aliquid a beatae id reprehenderit recusandae dolor natus
+                eveniet voluptatem rerum eius.
+              </p>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                autem provident quae enim hic exercitationem, temporibus labore
+                facilis aliquid a beatae id reprehenderit recusandae dolor natus
+                eveniet voluptatem rerum eius.
+              </p>
+            </div>
           </div>
         </div>
       </section>
