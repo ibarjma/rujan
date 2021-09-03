@@ -71,7 +71,7 @@ export default function Footer() {
                     src='images/footer/mail.png'
                   ></img>
                 </span>
-                <span className='poppinsRegular'>
+                <span className='poppinsRegular text-xl'>
                   rujanscouter.es@gmail.com
                 </span>
               </div>

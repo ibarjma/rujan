@@ -160,7 +160,6 @@ export default function Brand() {
           src='images/brand/formaCelesteGrande.svg'
           alt=''
         />
-        {/* <section className='fondoCeleste'></section> */}
       </div>
       <div className='relative px-3 py-3 mt-16 max-w-screen-md lg:max-w-6xl md:max-w-5xl sm:mx-auto'>
         <div class='flex flex-wrap -mx-1 '>

@@ -16,7 +16,7 @@ const OlaFooter = ({ location }) => {
           alt=''
         />
       )
-    case '/agency':
+    case ('/agency', '/shopstreaming', '/about'):
       return (
         <img
           style={{
